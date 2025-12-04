@@ -1,22 +1,22 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "*   *" <<std::endl;
-    std::cout << "*   *" << std::endl;
-    std::cout << "*****" << std::endl;
-    std::cout << "*   *" << std::endl;
-    std::cout << "*   *" << std::endl;
+    cout << "*   *" <<endl;
+    cout << "*   *" <<endl;
+    cout << "*****" <<endl;
+    cout << "*   *" <<endl;
+    cout << "*   *" <<endl;
 
     return 0;
 
     /*
     My Ans
-    std::cout << "*   "<<"*\n";
-    std::cout << "*   " << "*\n";
-    std::cout << "*****\n";
-    std::cout << "*   " << "*\n";
-    std::cout << "*   " << "*\n";
+   cout << "*   "<<"*\n";
+   cout << "*   " << "*\n";
+   cout << "*****\n";
+   cout << "*   " << "*\n";
+   cout << "*   " << "*\n";
     
         return 0;
 

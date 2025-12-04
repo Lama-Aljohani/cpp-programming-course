@@ -1,14 +1,13 @@
-
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "I Love Programming!" << std::endl<<std::endl;
-    std::cout << "I promise to be the best developer ever!" << std::endl << std::endl;
-    std::cout << "I Know it will take some time to practice, but I will achive my goal.";
-    std::cout << std::endl << std::endl;
-    std::cout << "Best Regards," << std::endl;
-    std::cout << "Lama Aljohani." << std::endl;
+    cout << "I Love Programming!" << endl<<endl;
+    cout << "I promise to be the best developer ever!" << endl << endl;
+    cout << "I Know it will take some time to practice, but I will achive my goal." << endl << endl;
+    cout << "Best Regards," << endl;
+    cout << "Lama Aljohani." << endl;
 
     return 0;
 
