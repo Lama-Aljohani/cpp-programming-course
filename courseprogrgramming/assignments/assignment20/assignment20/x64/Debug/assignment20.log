@@ -1,0 +1,3 @@
+﻿  assignment20.cpp
+D:\courseprogrgramming\assignments\assignment20\assignment20\assignment20.cpp(16,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  assignment20.vcxproj -> D:\courseprogrgramming\assignments\assignment20\x64\Debug\assignment20.exe
