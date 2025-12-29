@@ -1,0 +1,3 @@
+﻿  assignment21.cpp
+D:\courseprogrgramming\assignments\assignment21\assignment21\assignment21.cpp(15,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  assignment21.vcxproj -> D:\courseprogrgramming\assignments\assignment21\x64\Debug\assignment21.exe
