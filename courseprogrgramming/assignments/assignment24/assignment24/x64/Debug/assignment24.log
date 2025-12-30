@@ -1,0 +1,3 @@
+﻿  assignment24.cpp
+D:\courseprogrgramming\assignments\assignment24\assignment24\assignment24.cpp(29,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  assignment24.vcxproj -> D:\courseprogrgramming\assignments\assignment24\x64\Debug\assignment24.exe
