@@ -1,0 +1,4 @@
+﻿  assignment26.cpp
+D:\courseprogrgramming\assignments\assignment26\assignment26\assignment26.cpp(14,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\courseprogrgramming\assignments\assignment26\assignment26\assignment26.cpp(15,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  assignment26.vcxproj -> D:\courseprogrgramming\assignments\assignment26\x64\Debug\assignment26.exe
