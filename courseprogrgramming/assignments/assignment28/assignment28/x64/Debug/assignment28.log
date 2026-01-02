@@ -1,0 +1,6 @@
+﻿  assignment28.cpp
+D:\courseprogrgramming\assignments\assignment28\assignment28\assignment28.cpp(26,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\courseprogrgramming\assignments\assignment28\assignment28\assignment28.cpp(28,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\courseprogrgramming\assignments\assignment28\assignment28\assignment28.cpp(30,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\courseprogrgramming\assignments\assignment28\assignment28\assignment28.cpp(9,11): warning C4101: 'seconds': unreferenced local variable
+  assignment28.vcxproj -> D:\courseprogrgramming\assignments\assignment28\x64\Debug\assignment28.exe
