@@ -1,81 +1,73 @@
 #include <iostream>
 using namespace std;
 
-enum Gender { m, f };
-enum Status { single, married };
-enum Color { Red , Yellow , Green, Blue };
+enum enGender { Male, Female };
+enum enMaritalStatus { Single, Married };
+enum enColor { Red , Yellow , Green, Blue };
 
-struct ContactInformation {
-
-    string phone;
-    string email;
+struct stAddress {
+    string StreetName;
+    string BuldingNO;
+    string POBox;
+    string ZipCode;
 
 };
 
-struct Personalemplpyee {
+struct stContactInformation {
 
-    string Name;
+    string Phone;
+    string Email;
+    stAddress Adress;
+
+};
+
+struct stPersonalemplpyee {
+
+    string FirstName;
+    string LastName;
+
     int Age;
     string City;
     string Country;
     float MonthlySalary;
-   
-    ContactInformation EmployeeContact;
+    stContactInformation EmployeeContact;
+
+    enGender MyGender;
+    enMaritalStatus MyMaritalStatus;
+    enColor MyfavColor;
+
 };
 
 
 int main()
 {
-    Personalemplpyee employee1;
+    stPersonalemplpyee Personal;
 
-    employee1.Name;
-    employee1.Age;
-    employee1.City;
-    employee1.Country;
-    employee1.MonthlySalary;
-    Gender MyGender;
-    Status MyStatus;
-    employee1.EmployeeContact.email;
-    employee1.EmployeeContact.phone;
-    Color MyfavColor;
+    Personal.FirstName = "Lama";
+    Personal.LastName = "Aljohani";
 
-    MyGender = Gender::f;
-    MyStatus = Status::single;
-    MyfavColor = Color::Yellow;
+    Personal.EmployeeContact.Email = "Aljohani@gmail.com";
+    Personal.EmployeeContact.Phone = "054123979";
+    Personal.EmployeeContact.Adress.POBox = "7769";
+    Personal.EmployeeContact.Adress.ZipCode = "55536";
+    Personal.EmployeeContact.Adress.StreetName = "Omer bin khtab";
+    Personal.EmployeeContact.Adress.BuldingNO = "518";
 
-        cout << "Please enter your Name?" << endl;
-        cin >> employee1.Name;
 
-        cout << "Please enter your Age?" << endl;
-        cin >> employee1.Age;
+    Personal.MyGender= enGender::Female;
+    Personal. MyMaritalStatus=enMaritalStatus::Single;
+    Personal. MyfavColor=enColor::Yellow;
 
-        cout << "Please enter your City?" << endl;
-        cin >> employee1.City;
-
-        cout << "Please enter your Country?" << endl;
-        cin >> employee1.Country;
-
-        cout << "Please enter your Monthly Salary?" << endl;
-        cin >> employee1.MonthlySalary;
-
-        cout << "Please enter your Email ?" << endl;
-        cin >> employee1.EmployeeContact.email;
-
-        cout << "Please enter your Phone ?" << endl;
-        cin >> employee1.EmployeeContact.phone;
-
-        cout << "***************************\n";
-        cout << "Name: " << employee1.Name << endl;
-        cout << "Age: " << employee1.Age << " years." << endl;
-        cout << "City: " << employee1.City << endl;
-        cout << "Country: " << employee1.Country << endl;
-        cout << "Monthly Salary: " << employee1.MonthlySalary << endl;
-        cout << "Yearly Salary: " << employee1.MonthlySalary * 12 << endl;
-        cout << "Grnder: " << MyGender << endl;
-        cout << "Married: " << MyStatus << endl;
-        cout << "Email: " << employee1.EmployeeContact.email << endl;
-        cout << "Phone: " << employee1.EmployeeContact.phone << endl;
-        cout << "***************************\n";
+    cout << "*****************************************" << endl;
+    cout << Personal.FirstName << endl;
+    cout << Personal.LastName << endl;
+    cout << Personal.EmployeeContact.Email << endl;
+    cout << Personal.EmployeeContact.Phone << endl;
+    cout << Personal.EmployeeContact.Adress.POBox << endl;
+    cout << Personal.EmployeeContact.Adress.ZipCode << endl;
+    cout << Personal.EmployeeContact.Adress.StreetName << endl;
+    cout << Personal.EmployeeContact.Adress.BuldingNO << endl;
+    cout << "*****************************************"  << endl;
 
         return 0;
 
