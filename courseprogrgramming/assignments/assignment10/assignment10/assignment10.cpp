@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
-
+enum Gender { m, f };
+enum Status { single, married };
+enum Color { Red , Yellow , Green, Blue };
 
 struct ContactInformation {
 
@@ -17,8 +19,7 @@ struct Personalemplpyee {
     string City;
     string Country;
     float MonthlySalary;
-    char Gender;
-    bool isMarried;
+   
     ContactInformation EmployeeContact;
 };
 
@@ -32,10 +33,15 @@ int main()
     employee1.City;
     employee1.Country;
     employee1.MonthlySalary;
-    employee1.Gender;
-    employee1.isMarried;
+    Gender MyGender;
+    Status MyStatus;
     employee1.EmployeeContact.email;
     employee1.EmployeeContact.phone;
+    Color MyfavColor;
+
+    MyGender = Gender::f;
+    MyStatus = Status::single;
+    MyfavColor = Color::Yellow;
 
         cout << "Please enter your Name?" << endl;
         cin >> employee1.Name;
@@ -52,12 +58,6 @@ int main()
         cout << "Please enter your Monthly Salary?" << endl;
         cin >> employee1.MonthlySalary;
 
-        cout << "Please enter your Gender ?" << endl;
-        cin >> employee1.Gender;
-
-        cout << "Are you married  1\0 ?" << endl;
-        cin >> employee1.isMarried;
-
         cout << "Please enter your Email ?" << endl;
         cin >> employee1.EmployeeContact.email;
 
@@ -71,8 +71,8 @@ int main()
         cout << "Country: " << employee1.Country << endl;
         cout << "Monthly Salary: " << employee1.MonthlySalary << endl;
         cout << "Yearly Salary: " << employee1.MonthlySalary * 12 << endl;
-        cout << "Grnder: " << employee1.Gender << endl;
-        cout << "Married: " << employee1.isMarried << endl;
+        cout << "Grnder: " << MyGender << endl;
+        cout << "Married: " << MyStatus << endl;
         cout << "Email: " << employee1.EmployeeContact.email << endl;
         cout << "Phone: " << employee1.EmployeeContact.phone << endl;
         cout << "***************************\n";
