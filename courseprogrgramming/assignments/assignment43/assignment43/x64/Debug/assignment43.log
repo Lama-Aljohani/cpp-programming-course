@@ -1,0 +1,3 @@
+﻿  assignment43.cpp
+D:\courseprogrgramming\assignments\assignment43\assignment43\assignment43.cpp(10,12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  assignment43.vcxproj -> D:\courseprogrgramming\assignments\assignment43\x64\Debug\assignment43.exe
