@@ -5,15 +5,13 @@ using namespace std;
 
 int main()
 {
-    string FullName;
-    string String2;
-    string String3;
+    string String1, String2, String3;
 
     cout << "Please enter String1?" << endl;
 
-    getline(cin, FullName);
+    getline(cin, String1);
 
-    cout << FullName << endl;
+    cout << String1 << endl;
 
     cout << "Please enter String2?" << endl;
     cin >> String2;
@@ -22,14 +20,13 @@ int main()
     cin >> String3;
     cout << "***********************************" << endl;
 
-    string concatN = String2 + String3;
+    cout << "the length of string is " << String1.length() << endl;
+    cout << "Characters at 0,2,4,7 are:" << String1[0] << " " << String1[2] << " " << String1[4] << " " << String1[7] <<endl;
+    cout << "Concatenating String2 and String3 =" << String2 + String3 << endl;
 
-    cout << "the length of string is " << FullName.length() << endl;
-    cout << "Characters at 0,2,4,7 are:" << FullName[0] << " " << FullName[2] << " " << FullName[4] << " " << FullName[7] <<endl;
-    cout << "Concatenating String2 and String3 =" << concatN << endl;
+    int Result = stoi(String2) * stoi(String3);
 
-    int Sum = stoi(String2) * stoi(String3);
-    cout << Sum << endl;
+    cout << String2 <<"*" << String3 << " = " << Result << endl;
 
     return 0;
 
