@@ -3,21 +3,22 @@
 
 using namespace std;
 
-int main()
+double circleArea(double r, const double  PI = 3.1416 ) 
+
 {
-    double r;
-    const double  PI = 3.1416;
 
-
-    cout << "please enter the number r" << endl;
-    cin >> r;
-
-    
-    double area = PI * pow(r,2);
+    double area = PI * pow(r, 2);
 
     double finalResult = ceil(area);
 
-    cout << "Result = " << finalResult << endl;
+    return finalResult ;
+
+}
+
+int main()
+{
+
+    cout << "Result = " << circleArea(5) << endl;
     cout << endl;
 
     return 0;

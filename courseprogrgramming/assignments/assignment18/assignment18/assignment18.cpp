@@ -1,23 +1,15 @@
 #include <iostream>
 using namespace std;
 
-
+int rectangleArea(int a,int b)
+{
+    return a * b;
+}
 
 int main()
 {
 
-    int a;
-    int b;
-
-
-    cout << "Please enter  a" << endl;
-    cin >> a;
-
-    cout << "Please enter  b" << endl;
-    cin >> b;
-    int Area = a * b;
-
-    cout << "Area = " << Area << endl;
+    cout << "Rectangle Area = " << rectangleArea(5 , 10) << endl;
 
     return 0;
 }
