@@ -1,24 +1,19 @@
 #include <iostream>
 using namespace std;
+
+void PrintH() {
+
+    cout << "*   *" << endl;
+    cout << "*   *" << endl;
+    cout << "*****" << endl;
+    cout << "*   *" << endl;
+    cout << "*   *" << endl;
+}
+
 int main()
 {
-    cout << "*   *" <<endl;
-    cout << "*   *" <<endl;
-    cout << "*****" <<endl;
-    cout << "*   *" <<endl;
-    cout << "*   *" <<endl;
-
+    PrintH();
     return 0;
 
-    /*
-    My Ans
-   cout << "*   "<<"*\n";
-   cout << "*   " << "*\n";
-   cout << "*****\n";
-   cout << "*   " << "*\n";
-   cout << "*   " << "*\n";
-    
-        return 0;
-
-    */
+ 
 }

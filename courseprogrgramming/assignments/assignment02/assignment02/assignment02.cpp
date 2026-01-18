@@ -1,15 +1,20 @@
 #include <iostream>
 using namespace std;
 
+
+void PrintSequrStars(){
+
+    cout << "********\n";
+    cout << "********\n";
+    cout << "********\n";
+    cout << "********\n";
+
+}
 int main()
 {
-    cout << "********\n";
-    cout << "********\n";
-    cout << "********\n";
-    cout << "********\n";
+    PrintSequrStars();
 
     return 0;
-
 
 }
 
