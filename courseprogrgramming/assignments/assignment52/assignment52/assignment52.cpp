@@ -3,11 +3,7 @@
 using namespace std;
 
 
-int main()
-{
-	int Mark1;
-	int Mark2;
-	int Mark3;
+void ReadMarks(int &Mark1, int &Mark2, int &Mark3) {
 
 	cout << "Please Enter your Mark1 " << endl;
 	cin >> Mark1;
@@ -18,11 +14,23 @@ int main()
 	cout << "Please Enter your Mark3 " << endl;
 	cin >> Mark3;
 
-	int Average = (Mark1 + Mark2 + Mark3) / 3;
+}
 
-	cout << Average << endl;
+int CalculateAvg(int Mark1, int Mark2, int Mark3 ) {
 
-	if (Average >= 50)
+	return (Mark1 + Mark2 + Mark3) / 3;
+
+}
+
+bool CheckAvg(int Average) {
+
+	return ( Average >= 50);
+}
+
+void PrintAverage(bool ResultMarks) {
+
+
+	if (ResultMarks)
 	{
 
 		cout << "Pass " << endl;
@@ -33,6 +41,17 @@ int main()
 		cout << "Fail " << endl;
 
 	}
+
+}
+
+
+int main()
+{
+	int Mark1, Mark2, Mark3;
+	ReadMarks( Mark1, Mark2, Mark3);
+	int Average=  CalculateAvg( Mark1,  Mark2,  Mark3);
+	bool ResultMarks = CheckAvg(Average);
+	PrintAverage(ResultMarks);
 
 	return 0;
 
