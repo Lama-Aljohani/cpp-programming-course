@@ -19,32 +19,28 @@ int main()
 	cout << "Please Enter Operation Type " << endl;
 	cin >> OperationType;
 
-	if (OperationType == '*') {
 
+	switch (OperationType){
+
+	case '*':
 		cout << Number1 * Number2 << endl;
+		break;
 
-	}
-	else if (OperationType == '/') {
-
+	case '/':
 		cout << Number1 / Number2 << endl;
+		break;
 
-	}
-	else if (OperationType == '+') {
-
+	case '+':
 		cout << Number1 + Number2 << endl;
+		break;
 
-	}
-
-	else if (OperationType == '-') {
-
+	case '-':
 		cout << Number1 - Number2 << endl;
+		break;
 
-	}
-
-	else
-	{
+	dufult :
 		cout << "Wrong operation" << endl;
-
+		break;
 	}
 
 	return 0;
