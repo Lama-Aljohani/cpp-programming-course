@@ -9,81 +9,62 @@ int main()
 	cout << "Please Enter Month " << endl;
 	cin >> Month;
 
-	if (Month == 1) {
+	switch (Month) {
 
+	case 1:
 		cout << "January" << endl;
+		break;
 
-	}
-	else if (Month == 2) {
-
+	case 2:
 		cout << "February" << endl;
+		break;
 
-	}
-	else if (Month == 3) {
-
+	case 3:
 		cout << "March" << endl;
+		break;
 
-	}
-	else if (Month == 4) {
-
+	case 4:
 		cout << "April" << endl;
+		break;
 
-	}
 
-	else if (Month == 5) {
-
+	case 5:
 		cout << "May" << endl;
+		break;
 
-	}
 
-	else if (Month == 6) {
-
+	case 6:
 		cout << "June" << endl;
+		break;
 
-	}
 
-	else if (Month == 7) {
-
+	case 7:
 		cout << "July" << endl;
+		break;
 
-	}
-
-	else if (Month == 8) {
-
+	case 8:
 		cout << "August" << endl;
+		break;
 
-	}
-
-
-	else if (Month == 9) {
-
+	case 9:
 		cout << "September" << endl;
+		break;
 
-	}
-
-
-	else if (Month == 10) {
-
+	case 10:
 		cout << "October" << endl;
+		break;
 
-	}
-
-	else if (Month == 11) {
-
+	case 11:
 		cout << "November" << endl;
+		break;
 
-	}
-
-	else if (Month == 12) {
-
+	case 12:
 		cout << "December" << endl;
+		break;
 
-	}
-
-	else
-	{
+	default:
 		cout << "Wrong Month" << endl;
-
+		break;
 	}
 
 	return 0;
