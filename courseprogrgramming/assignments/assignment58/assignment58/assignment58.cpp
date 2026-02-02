@@ -9,46 +9,33 @@ int main()
 	cout << "Please Enter Day " << endl;
 	cin >> Day;
 
-	if (Day == 1) {
+	switch (Day) {
 
+	case 1:
 		cout << "Sunday" << endl;
+		break;
 
-	}
-	else if (Day ==2) {
-
+	case 2:
 		cout << "Monday" << endl;
+		break;
 
-	}
-	else if (Day == 3) {
-
+	case 3:
 		cout << "Tuesday" << endl;
-
-	}
-	else if (Day == 4) {
-
+		break;
+	
+	case 4:
 		cout << "Wednesday" << endl;
-
-	}
-
-	else if (Day == 5) {
-
+		break;
+	case 5:
 		cout << "Thursday" << endl;
-
-	}
-
-	else if (Day == 6) {
-
+		break;
+	case 6:
 		cout << "Friday" << endl;
-
-	}
-
-	else if (Day == 7) {
-
+		break;
+	case 7:
 		cout << "Saturday" << endl;
-
-	}
-	else
-	{
+		break;
+	default:
 		cout << "Wrong Day" << endl;
 
 	}
