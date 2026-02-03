@@ -2,44 +2,69 @@
 #include <string>
 using namespace std;
 
-int main()
-{
-	int Day;
+enum enWeekDay{Sun=1, Mon=2, Tue=3, Wed=4, Thu=5, Fri=6, Sat=7};
 
-	cout << "Please Enter Day " << endl;
-	cin >> Day;
+void PrintWeekDay() {
 
-	switch (Day) {
+	cout << "  ******************************" << endl;
+	cout << "             Week Days               " << endl;
+	cout << "  ******************************" << endl;
+	cout << "  1: Sunday" << endl;
+	cout << "  2: Monday" << endl;
+	cout << "  3: Tuseday" << endl;
+	cout << "  4: Weddnesday" << endl;
+	cout << "  5: Thursday" << endl;
+	cout << "  6: Friday" << endl;
+	cout << "  7: Saturday" << endl;
+	cout << "  ******************************" << endl;
+	cout << "  Please enter the number of Day ?" << endl;
 
-	case 1:
-		cout << "Sunday" << endl;
-		break;
+}
 
-	case 2:
-		cout << "Monday" << endl;
-		break;
+enWeekDay ReadWeekDay() {
 
-	case 3:
-		cout << "Tuesday" << endl;
+	int wd;
+	cin >> wd;
+	return (enWeekDay)wd;
+}
+
+string GetWeekDayName(enWeekDay WeekDay) {
+
+
+	switch (WeekDay) {
+
+
+	case enWeekDay::Sun:
+		return "Sunday";
 		break;
-	
-	case 4:
-		cout << "Wednesday" << endl;
+	case enWeekDay::Mon:
+		return "Monday";
 		break;
-	case 5:
-		cout << "Thursday" << endl;
+	case enWeekDay::Tue:
+		return "Tuesday";
 		break;
-	case 6:
-		cout << "Friday" << endl;
+	case enWeekDay::Wed:
+		return "Wednesday";
 		break;
-	case 7:
-		cout << "Saturday" << endl;
+	case enWeekDay::Thu:
+		return "Thursday";
+		break;
+	case enWeekDay::Fri:
+		return "Friday";
+		break;
+	case enWeekDay::Sat:
+		return "Saturday";
 		break;
 	default:
-		cout << "Wrong Day" << endl;
-
+		return "Not a week day!\n";
 	}
+}
 
+int main()
+{
+
+	PrintWeekDay();
+	cout << "today is " << GetWeekDayName(ReadWeekDay()) << endl;
 	return 0;
 
 }
