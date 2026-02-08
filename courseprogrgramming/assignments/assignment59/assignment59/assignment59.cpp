@@ -2,71 +2,104 @@
 #include <string>
 using namespace std;
 
-int main()
-{
-	int Month;
+enum enMonths{ January =1, February =2, March=3, April=4, May=5, June=6, July=7, August=8, September=9, October=10, November=11, December
+=12};
 
-	cout << "Please Enter Month " << endl;
-	cin >> Month;
+void PrintMonth() {
 
-	switch (Month) {
+	cout << "  ******************************" << endl;
+	cout << "             Month               " << endl;
+	cout << "  ******************************" << endl;
+	cout << "  1: January" << endl;
+	cout << "  2: February" << endl;
+	cout << "  3: March" << endl;
+	cout << "  4: April" << endl;
+	cout << "  5: May" << endl;
+	cout << "  6: June" << endl;
+	cout << "  7: July" << endl;
+	cout << "  8: August" << endl;
+	cout << "  9: September" << endl;
+	cout << "  10: October" << endl;
+	cout << "  11: November" << endl;
+	cout << "  12: December" << endl;
+
+	cout << "  ******************************" << endl;
+	cout << "  Please enter the number of Month ?" << endl;
+
+}
+enMonths ReadMonth(){
+
+	int mh;
+	cin >> mh;
+	return(enMonths)mh;
+
+}
+string GetMonth(enMonths Month) {
+
+	switch ( Month) {
 
 	case 1:
-		cout << "January" << endl;
+		return "January" ;
 		break;
 
 	case 2:
-		cout << "February" << endl;
+		return "February" ;
 		break;
 
 	case 3:
-		cout << "March" << endl;
+		return "March";
 		break;
 
 	case 4:
-		cout << "April" << endl;
+		return "April" ;
 		break;
-
 
 	case 5:
-		cout << "May" << endl;
+		return "May";
 		break;
 
-
 	case 6:
-		cout << "June" << endl;
+		return "June" ;
 		break;
 
 
 	case 7:
-		cout << "July" << endl;
+		return "July" ;
 		break;
 
 	case 8:
-		cout << "August" << endl;
-		break;
+		return "August" ;
+		break; 
 
 	case 9:
-		cout << "September" << endl;
+		return "September";
 		break;
 
 	case 10:
-		cout << "October" << endl;
+		return "October";
 		break;
 
 	case 11:
-		cout << "November" << endl;
+		return "November";
 		break;
 
 	case 12:
-		cout << "December" << endl;
+		return "December";
 		break;
 
 	default:
-		cout << "Wrong Month" << endl;
+		return "Wrong Month";
 		break;
 	}
 
+}
+
+
+int main()
+{
+	PrintMonth();
+
+	cout << "Month is " << GetMonth(ReadMonth()) << endl;
 	return 0;
 
 }
