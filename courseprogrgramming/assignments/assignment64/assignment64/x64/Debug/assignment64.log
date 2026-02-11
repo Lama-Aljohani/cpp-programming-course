@@ -1,0 +1,3 @@
+﻿  assignment64.cpp
+D:\courseprogrgramming\assignments\assignment64\assignment64\assignment64.cpp(32,6): warning C4101: 'factorial': unreferenced local variable
+  assignment64.vcxproj -> D:\courseprogrgramming\assignments\assignment64\x64\Debug\assignment64.exe
