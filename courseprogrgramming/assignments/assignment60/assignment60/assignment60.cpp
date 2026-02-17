@@ -1,24 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void ReadNumber(int &N) {
+int ReadNumber(int& N) {
 	cout << "Please enter the Number " << endl;
 	cin >> N;
 	cout << "*************************" << endl;
 
-}
+	int C = 1;
 
-void CheckNumber(int N) {
+	while (C <= N)
 
-	for (int C = 1; C <= N; C++)
+	{
 		cout << C << endl;
+		C++;
+	}
+	return N;
 }
+
 int main()
 
 {
 	int N;
 	ReadNumber(N);
-	CheckNumber(N);
 
 	return 0;
 
