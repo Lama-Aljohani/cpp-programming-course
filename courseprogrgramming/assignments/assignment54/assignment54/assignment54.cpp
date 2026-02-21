@@ -9,9 +9,15 @@ void ReadPIN(int &PINCode) {
 
 }
 
-int CheckPINCode(int PINCode) {
+bool CheckPINCode(int PINCode) {
 
-	return (PINCode == 1234);
+	for (int i = 1; i <= 3; i++) {
+
+		if (PINCode == 1234)
+			return true;
+		cout << "Wrong  PIN" << endl;
+	}
+	return false;
 }
 
 void PrintPIN(bool ResultPIN , int Balance = 7500) {
@@ -24,18 +30,16 @@ void PrintPIN(bool ResultPIN , int Balance = 7500) {
 	}
 	else
 	{
-		cout << "Wrong PIN " << endl;
+		cout << "Card is locked! " << endl;
 
 	}
 }
-
 
 int main()
 {
 	int PINCode;
 	int Balance = 7500;
 
-	ReadPIN(PINCode);
 	bool ResultPIN = CheckPINCode(PINCode);
 	PrintPIN(ResultPIN);
 

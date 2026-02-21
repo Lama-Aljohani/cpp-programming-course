@@ -1,2 +1,2 @@
 ﻿  assignment54.cpp
-  assignment54.vcxproj -> D:\courseprogrgramming\assignments\assignment54\x64\Debug\assignment54.exe
+D:\courseprogrgramming\assignments\assignment54\assignment54\assignment54.cpp(43,1): error C4700: uninitialized local variable 'PINCode' used
