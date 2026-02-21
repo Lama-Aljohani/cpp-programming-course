@@ -2,18 +2,25 @@
 using namespace std;
 
 void ReadNumber(int& N) {
-	cout << "Please enter the Number " << endl;
+	cout << "Please enter the Positive Number " << endl;
 	cin >> N;
 	cout << "*************************" << endl;
+	while (N < 0) {
+
+		cout << "Wrong!Please enter a Positive Number " << endl;
+		cin >> N;
+	}
 
 }
 
 int FactorialofNumber(int N) {
 	int factorial = 1;
-	for (int C = 1; C <= N; C++) {
+	int C = 1;
+	while ( C <= N) {
 		factorial = factorial * C;
-
+		C++;
 	}
+
 		return factorial;
 	
 }

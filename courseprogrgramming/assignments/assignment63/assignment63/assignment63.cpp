@@ -10,14 +10,17 @@ void ReadNumber(int& N) {
 
 int CheckOddNumber(int N) {
 	int Sum = 0;
-	for (int C = 1; C <= N; C++) {
+	int C = 1;
+	while(C <= N){
 		if (C % 2 == 0) {
 			Sum = Sum + C;
 
 		}
+		C++;
 	}
 	return Sum;
 }
+
 
 void PrintResult(int Sum) {
 

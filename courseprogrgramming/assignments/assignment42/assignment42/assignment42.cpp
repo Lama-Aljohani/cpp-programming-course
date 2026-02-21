@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 
-void ReadinputUser(double &Number, double &M) {
+void ReadinputUser(double &Number, int &M) {
 
     cout << "Please enter the Number " << endl;
     cin >> Number;
@@ -12,22 +12,22 @@ void ReadinputUser(double &Number, double &M) {
 
 }
 
-double pownumberM(double Number,double M) {
-    
+double pownumberM(double Number, int M) {
+
     double result = 1;
+    int C = 1;
+    while (C <= M) {
 
-    for (int C = 1; C <= M; C++) {
+            result = result * Number;
+            C++;
+        }
+        return result;
 
-        result = result * Number;
     }
-    return result;
-
-}
-
 int main()
 {
     double Number; 
-    double M;
+    int M;
     ReadinputUser(Number, M);
     cout << "Result = " << pownumberM(Number, M) << endl;
 

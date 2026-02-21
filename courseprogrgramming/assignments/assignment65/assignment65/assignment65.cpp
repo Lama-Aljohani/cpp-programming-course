@@ -3,19 +3,20 @@ using namespace std;
 
 
 void PrintCapitalletters() {
-	for (int C = 65; C <= 90; C++) {
-
+	int C = 65;
+	while(C<=90){
 		cout << char(C) << " ";
+		C++;
 	}
 
 }
 
 void PrintSmallletters() {
 	cout << endl;
-
-	for (int C = 97; C <= 122; C++) {
-
+	int C = 97;
+	while(C<=122){
 		cout << char(C) << " ";
+		C++;
 	}
 }
 int main()
