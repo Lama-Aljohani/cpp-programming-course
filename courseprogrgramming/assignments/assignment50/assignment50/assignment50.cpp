@@ -2,46 +2,44 @@
 #include <string>
 using namespace std;
 
-void ReadInfo (int &Age,bool &HasDriverLicense)
-{
+struct stInfo {
+
+	int Age;
+	bool  HasDriverLicense;
+};
+
+stInfo ReadInfo() {
+
+	stInfo Info;
+
 
 	cout << "Please Enter your Age " << endl;
-	cin >> Age;
+	cin >> Info.Age;
 
 	cout << "Do you have Driver License ? " << endl;
-	cin >> HasDriverLicense;
+	cin >> Info.HasDriverLicense;
 
-
+	return Info;
 }
 
-bool ChrckHiring(int Age, bool HasDriverLicense) {
+bool IsAccepted(stInfo Info) {
 
-	return (Age > 21 && HasDriverLicense == 1);
+	return (Info.Age > 21 && Info.HasDriverLicense == 1);
 
-}
-void PrintResult(bool result) {
+};
 
-	if (result)
-	{
+void PrintResult(stInfo Info) {
+
+	if (IsAccepted(Info))
 
 		cout << " Hired " << endl;
-
-	}
 	else
-	{
 		cout << " Rejected " << endl;
-
-	}
 }
 
 int main()
 {
-	int Age;
-	bool HasDriverLicense;
-
-	ReadInfo( Age,  HasDriverLicense);
-	bool result = ChrckHiring( Age,HasDriverLicense);
-	PrintResult(result);
+	PrintResult(ReadInfo());
 
 	return 0;
 
