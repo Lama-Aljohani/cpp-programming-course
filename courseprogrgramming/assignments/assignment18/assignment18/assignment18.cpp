@@ -1,15 +1,36 @@
 #include <iostream>
 using namespace std;
 
-int rectangleArea(int a,int b)
-{
-    return a * b;
+void ReadNumbers(float& A, float& B) {
+
+
+    cout << "Please enter rectangle width A ?" << endl;
+    cin >> A;
+
+    cout << "Please enter rectangle length B ?" << endl;
+    cin >> B;
 }
+
+float CalculateRectangleArea(float A, float B) {
+
+    return A * B;
+
+}
+
+void PrintResult(float Area) {
+
+    cout << "\n Rectangle Area "<<Area << endl;
+
+}
+
 
 int main()
 {
 
-    cout << "Rectangle Area = " << rectangleArea(5 , 10) << endl;
+    float A, B;
+    ReadNumbers(A, B);
+    PrintResult(CalculateRectangleArea(A, B));
+
 
     return 0;
 }
