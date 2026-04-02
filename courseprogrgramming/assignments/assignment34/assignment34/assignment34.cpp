@@ -2,15 +2,33 @@
 #include <cmath>
 using namespace std;
 
-double rectangleArea2(double a , double d) {
 
+void ReadNumbers(float& A, float& D) {
 
-    return a * sqrt((pow(d, 2) - pow(a, 2)));
+    cout << "Please enter the rectangle side A ? " << endl;
+    cin >> A;
+
+    cout << "Please enter the rectangle diagonal D ? " << endl;
+    cin >> D;
+
+}
+
+float RectangleAreaBySideAndDiagonal(double A , double D) {
+
+    float Area = A * sqrt(pow(D, 2) - pow(A, 2));
+
+    return Area;
+
+}
+void PrintResult(float Area) {
+
+    cout << "\nRectangle Area = " << Area << endl;
 }
 
 int main()
 {
-    cout << rectangleArea2 (5,40) << endl;
-
+    float A, D;
+    ReadNumbers(A, D);
+    PrintResult(RectangleAreaBySideAndDiagonal(A, D));
     return 0;
 }
