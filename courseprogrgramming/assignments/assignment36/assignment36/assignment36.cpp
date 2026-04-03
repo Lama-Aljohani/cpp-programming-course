@@ -3,20 +3,38 @@
 
 using namespace std;
 
-double circleArea(double D , const double  PI = 3.1416)
+
+float ReadRDiameter() {
+
+    float D;
+    cout << "Please enter the diameter D ? " << endl;
+    cin >> D;
+
+    return D;
+}
+
+float CircleArea(float D)
+
 {
+    const float  PI = 3.141592653589793238;
 
-    double area = PI * pow(D, 2) / 4;
-    double finalresult = ceil(area);
+    float Area = (pow(D, 2) * PI)/4;
 
-    return finalresult;
+    return Area;
+
+}
+
+
+void PrintResult(float Area) {
+
+    cout << "\nCircle Area = " << Area << endl;
 
 }
 
 int main()
 {
 
-    cout << "finalresult =  " << circleArea (10) << endl;
+     PrintResult(CircleArea (ReadRDiameter ()));
 
     return 0;
 }
