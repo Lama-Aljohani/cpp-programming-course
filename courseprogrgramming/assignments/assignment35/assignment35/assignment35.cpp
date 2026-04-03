@@ -3,23 +3,35 @@
 
 using namespace std;
 
-double circleArea(double r, const double  PI = 3.1416 ) 
+float ReadRadious() {
+
+    float R;
+    cout << "Please enter the radioud r ? " << endl;
+    cin >> R;
+
+    return R;
+}
+
+float CircleArea(float R)
 
 {
+    const float  PI = 3.141592653589793238;
 
-    double area = PI * pow(r, 2);
+    float Area = pow(R, 2) * PI;
 
-    double finalResult = ceil(area);
+    return Area;
 
-    return finalResult ;
+}
+
+void PrintResult(float Area) {
+
+    cout << "\n Circle Area = " << Area << endl;
 
 }
 
 int main()
 {
-
-    cout << "Result = " << circleArea(5) << endl;
-    cout << endl;
+    PrintResult(CircleArea(ReadRadious()));
 
     return 0;
 }
