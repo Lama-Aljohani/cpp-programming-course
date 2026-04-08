@@ -3,31 +3,31 @@
 using namespace std;
 
 
-void ReadAge(int& Age) {
+int ReadAge() {
 
-
+	int Age;
 	cout << "Please Enter your Age " << endl;
 	cin >> Age;
 
-
+	return Age;
 }
 
-int CkeckAge(int Age) {
+bool ValidateNumberInRange (int Number ,int From, int To) {
 
-	return (Age >= 18 && Age <= 45);
+	return (Number >= From && Number <= To);
 }
 
-void PrintResult(bool Result) {
+void PrintResult(int Age) {
 
-	if (Result)
+	if (ValidateNumberInRange(Age, 18 , 45))
 	{
 
-		cout << "Vaild Age " << endl;
+		cout << Age <<	" is a vaild age \n";
 
 	}
 	else
 	{
-		cout << "Invalid Age " << endl;
+		cout <<	Age <<	" is invalid age \n";
 
 	}
 
@@ -35,11 +35,7 @@ void PrintResult(bool Result) {
 
 int main()
 {
-	int Age;
-	
-	ReadAge(Age);
-	bool Result = CkeckAge( Age);
-	PrintResult (Result);
+	PrintResult (ReadAge());
 
 	return 0;
 

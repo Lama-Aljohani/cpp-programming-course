@@ -3,27 +3,32 @@
 
 using namespace std;
 
+void ReadTringleData(float & A, float &B) {
+
+    cout << "Please enter the tringle side  A " << endl;
+    cin >> A;
+
+    cout << "Please enter the tringle base B " << endl;
+    cin >> B;
+
+}
+
+float CircleAreaByTringle(float A, float B) {
+
+    const float  PI = 3.141592653589793238;
+    float Area = (PI * pow(B, 2) / 4) * ((2 * A - B) / (2 * A + B));
+
+    return Area;
+}
+void PrintResult(float Area) {
+
+    cout<<"\nCircle Area =" << Area << endl;
+}
 int main()
 {
-    double a;
-    double b;
-
-    const double  PI = 3.1416;
-
-
-    cout << "please enter the number a" << endl;
-    cin >> a;
-
-    cout << "please enter the number b" << endl;
-    cin >> b;
-
-    double area = (PI * pow(b, 2) /4 ) * ((2*a-b) / (2 * a + b));
-    double finalresult = floor(area);
-
-    cout << endl;
-
-
-    cout << "finalresult =  " << finalresult << endl;
-
+    
+    float A, B;
+    ReadTringleData(A, B);
+    PrintResult(CircleAreaByTringle(A, B));
     return 0;
 }

@@ -1,2 +1,4 @@
 ﻿  assignment39.cpp
+D:\courseprogrgramming\assignments\assignment39\assignment39\assignment39.cpp(23,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\courseprogrgramming\assignments\assignment39\assignment39\assignment39.cpp(28,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   assignment39.vcxproj -> D:\courseprogrgramming\assignments\assignment39\x64\Debug\assignment39.exe
