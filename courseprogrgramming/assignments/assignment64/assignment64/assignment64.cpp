@@ -1,46 +1,32 @@
 #include <iostream>
 using namespace std;
 
-void ReadNumber(int& N) {
-	cout << "Please enter the Positive Number " << endl;
-	cin >> N;
-	cout << "*************************" << endl;
-	while (N < 0) {
+int ReadPositiveNumber(string Message) {
 
-		cout << "Wrong!Please enter a Positive Number " << endl;
-		cin >> N;
+	int Number;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number < 0);
+
+	return Number;
+}
+int Factorial(int N)
+{
+	int F = 1;
+	for (int Counter = N; Counter >= 1; Counter--)
+	{
+		F = F * Counter;
 	}
 
+	return F;
 }
-
-int FactorialofNumber(int N) {
-	int factorial = 1;
-	int C = 1;
-	while ( C <= N) {
-		factorial = factorial * C;
-		C++;
-	}
-
-		return factorial;
-	
-}
-
-void PrintResult(int factorial) {
-
-	cout << "The factorial of Number is: " << factorial << endl;
-
-}
-
 
 int main()
 
 {
-	int N;
-	int factorial;
-	ReadNumber(N);
-	int Result = FactorialofNumber(N);
-	PrintResult(Result);
-
+	cout << Factorial(ReadPositiveNumber("Please enter the positive number ?")) << endl;
 	return 0;
 
 }
