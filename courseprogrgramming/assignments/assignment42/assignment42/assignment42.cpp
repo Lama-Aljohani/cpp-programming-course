@@ -2,34 +2,45 @@
 #include <cmath>
 using namespace std;
 
-void ReadinputUser(double &Number, int &M) {
+int ReadNumber() {
 
+    int Number;
     cout << "Please enter the Number " << endl;
     cin >> Number;
-    cout << "Please enter the M " << endl;
-    cin >> M;
-    cout << "*************************" << endl;
 
+    return Number;
 }
 
-double pownumberM(double Number, int M) {
+int ReadPower() {
 
-    double result = 1;
-    int C = 1;
-    while (C <= M) {
 
-            result = result * Number;
-            C++;
-        }
-        return result;
+    int Number;
+    cout << "Please enter the power " << endl;
+    cin >> Number;
+
+    return Number;
+}
+
+int PowerOfM(int Number, int M) {
+
+    if (M == 0)
+    {
+
+        return 1;
+    }
+
+    int P = 1;
+    for (int i = 1; i <= M; i++)
+    {
+        P = P * Number;
 
     }
+    return P;
+}
+
 int main()
 {
-    double Number; 
-    int M;
-    ReadinputUser(Number, M);
-    cout << "Result = " << pownumberM(Number, M) << endl;
+    cout << endl << "Result = " << PowerOfM(ReadNumber(), ReadPower()) << endl;;
 
     return 0;
 }

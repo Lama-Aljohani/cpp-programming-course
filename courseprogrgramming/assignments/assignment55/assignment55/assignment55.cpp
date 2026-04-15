@@ -2,44 +2,39 @@
 #include <string>
 using namespace std;
 
+
+int ReadNumberInRange(int From, int To) {
+
+	int Grade;
+	do
+	{
+		cout << "Please enter a Grade between 0 and 100? " << endl;
+		cin >> Grade;
+	} while (Grade <From || Grade >To);
+	return Grade;
+}
+
+char GetGradeLetter(int Grade) {
+
+	if (Grade >= 90)
+		return 'A';
+	else if (Grade >= 80)
+		return 'B';
+	else if (Grade >= 70)
+		return 'C';
+	else if (Grade >= 60)
+		return 'D';
+	else if (Grade >= 50)
+		return 'E';
+	else
+		return 'F';
+}
+
 int main()
 {
+
+	cout << endl << "Result = " << GetGradeLetter(ReadNumberInRange(0, 100)) << endl;
 	int Grade;
-
-	cout << "Please Enter Your Grade " << endl;
-	cin >> Grade;
-
-	if (Grade >= 90) {
-
-		cout << "A" << endl;
-
-	}
-	else if (Grade >=80) {
-
-		cout << "B" << endl;
-
-	}
-	else if (Grade >= 70) {
-
-		cout << "C" << endl;
-
-	}
-	else if (Grade >= 60) {
-
-		cout << "D" << endl;
-
-	}
-
-	else if (Grade >= 50) {
-
-		cout << "E" << endl;
-
-	}
-	else
-	{
-		cout << "F" << endl;
-
-	}
 
 	return 0;
 

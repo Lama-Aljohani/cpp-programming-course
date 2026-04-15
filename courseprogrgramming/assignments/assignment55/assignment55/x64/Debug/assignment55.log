@@ -1,2 +1,3 @@
 ﻿  assignment55.cpp
+D:\courseprogrgramming\assignments\assignment55\assignment55\assignment55.cpp(37,6): warning C4101: 'Grade': unreferenced local variable
   assignment55.vcxproj -> D:\courseprogrgramming\assignments\assignment55\x64\Debug\assignment55.exe
