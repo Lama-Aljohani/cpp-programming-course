@@ -2,44 +2,45 @@
 #include <string>
 using namespace std;
 
-int main()
-{
-	float TotalSales;
-	float Percentage;
-	float totalcomision;
 
-	cout << "Please Enter Total Sales " << endl;
+int ReadTotalSales()
+{
+	int TotalSales;
+
+	cout << "Please enter a Total Sales?" << endl;
 	cin >> TotalSales;
 
-	if (TotalSales > 1000000) {
+	return TotalSales;
+}
 
-		Percentage = 0.01;
-	}
-	else if (TotalSales >500000) {
+float GetComissionPercentage(float TotalSales) {
 
-		Percentage = 0.02;
-
-	}
-	else if (TotalSales >100000) {
-
-		Percentage = 0.03;
-
-	}
-	else if (TotalSales > 50000) {
-
-		Percentage = 0.05;
-
-	}
-
+	if (TotalSales > 1000000)
+		return 0.01;
+	else if (TotalSales > 500000)
+		return 0.02;
+	else if (TotalSales > 100000)
+		return 0.03;
+	else if (TotalSales > 50000)
+		return 0.05;
 	else
-	{
-		Percentage = 0.00;
+		return 0.00;
 
-	}
+}
 
-	totalcomision = TotalSales * Percentage;
-	cout << "comission = " << totalcomision  << endl;
+float CalculateTotalComission(float TotalSales) {
 
+	return GetComissionPercentage(TotalSales) * TotalSales;
+}
+int main()
+{
+
+
+	float TotalSales = ReadTotalSales();
+	
+	cout << endl << "Comission Precentage = " << GetComissionPercentage(TotalSales);
+	cout << endl << "Total Comission = " << CalculateTotalComission(TotalSales);
+		
 
 	return 0;
 
