@@ -2,47 +2,53 @@
 #include <string>
 using namespace std;
 
+
+enum enOperationType {Add = '+', Subtract = '-', Multiply = '*', Divide = ' / '  };
+
+float ReadNumber(string Message) {
+
+	float Number = 0;
+	cout << Message << endl;
+	cin >> Number;
+
+	return Number;
+
+}
+
+enOperationType ReadOpType()
+{
+	char OT = '+';
+
+	cout << "Please enter Operation Type(+, -, * , / ) ? \n";
+	cin >> OT;
+	return (enOperationType)OT;
+}
+
+float Calculate(float Number1, float Number2, enOperationType OnType) {
+
+	switch (OnType)
+	{
+	case enOperationType::Add:
+		return Number1 + Number2;
+	case enOperationType::Subtract:
+		return Number1 - Number2;
+	case enOperationType::Multiply:
+		return Number1 * Number2;
+	case enOperationType::Divide:
+		return Number1 / Number2;
+	default:
+		return Number1 + Number2;
+	}
+}
+
 int main()
 {
-	int Number1;
-	int Number2;
-	char OperationType;
+	float Number1 = ReadNumber("Please enter the first number");
+	float Number2 = ReadNumber("Please enter the second number");
 
-	cout << "Please Enter Number1 " << endl;
-	cin >> Number1;
+	enOperationType OpType = ReadOpType();
 
-
-	cout << "Please Enter Number2 " << endl;
-	cin >> Number2;
-
-
-	cout << "Please Enter Operation Type " << endl;
-	cin >> OperationType;
-
-
-	switch (OperationType){
-
-	case '*':
-		cout << Number1 * Number2 << endl;
-		break;
-
-	case '/':
-		cout << Number1 / Number2 << endl;
-		break;
-
-	case '+':
-		cout << Number1 + Number2 << endl;
-		break;
-
-	case '-':
-		cout << Number1 - Number2 << endl;
-		break;
-
-	dufult :
-		cout << "Wrong operation" << endl;
-		break;
-	}
-
+	cout << endl << "Result = " << Calculate(Number1, Number2, OpType) << endl;
 	return 0;
 
 }

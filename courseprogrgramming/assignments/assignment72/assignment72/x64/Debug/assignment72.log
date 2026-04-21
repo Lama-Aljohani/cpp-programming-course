@@ -1,2 +1,4 @@
 ﻿  assignment72.cpp
+D:\courseprogrgramming\assignments\assignment72\assignment72\assignment72.cpp(22,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\courseprogrgramming\assignments\assignment72\assignment72\assignment72.cpp(32,9): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
   assignment72.vcxproj -> D:\courseprogrgramming\assignments\assignment72\x64\Debug\assignment72.exe
