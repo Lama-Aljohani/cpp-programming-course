@@ -1,0 +1,4 @@
+﻿  assignment81.cpp
+D:\courseprogrgramming\assignments\assignment81\assignment81\assignment81.cpp(21,8): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\courseprogrgramming\assignments\assignment81\assignment81\assignment81.cpp(47,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  assignment81.vcxproj -> D:\courseprogrgramming\assignments\assignment81\x64\Debug\assignment81.exe
