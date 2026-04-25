@@ -1,25 +1,39 @@
 #include <iostream>
 using namespace std;
 
+
+float ReadPositiveNumber(string Message) {
+
+    float Number = 0;
+    do
+    {
+        cout << Message << endl;
+        cin >> Number;
+    } while (Number <= 0);
+
+    return Number;
+}
+
+
+float CalculateReminder(float TotalBill, float TotalCashPaid) {
+
+    return TotalCashPaid - TotalBill;
+}
+
+
+
 int main()
 {
 
-    float TotalBill;
-    float CashPaid;
-
-
-    cout << "Please enter the TotalBill" << endl;
-    cin >> TotalBill;
-
-    cout << "Please enter the CashPaid" << endl;
-    cin >> CashPaid;
-
-    
-    float paidback =  CashPaid - TotalBill;
-
+    float TotalBill = ReadPositiveNumber("Please Enter Total Bill?");
+    float TotalCashPaid = ReadPositiveNumber("Please Total Cash Paid?");
 
     cout << endl;
-    cout << paidback << endl;
+    cout << "Total Bill = " << TotalBill << endl;
+    cout << "Total Cash Paid = " << TotalCashPaid << endl;
+
+    cout << "****************************\n";
+    cout << "Reminder = " << CalculateReminder(TotalBill, TotalCashPaid) << endl;
 
     return 0;
 }
