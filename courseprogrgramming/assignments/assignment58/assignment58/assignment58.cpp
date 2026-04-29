@@ -2,69 +2,53 @@
 #include <string>
 using namespace std;
 
-enum enWeekDay{Sun=1, Mon=2, Tue=3, Wed=4, Thu=5, Fri=6, Sat=7};
+enum enDayOfWeek {Sun=1, Mon=2, Tue=3, Wed=4, Thu=5, Fri=6, Sat=7};
 
-void PrintWeekDay() {
+int ReadNumberInRange(string Message, int From, int To) {
 
-	cout << "  ******************************" << endl;
-	cout << "             Week Days               " << endl;
-	cout << "  ******************************" << endl;
-	cout << "  1: Sunday" << endl;
-	cout << "  2: Monday" << endl;
-	cout << "  3: Tuseday" << endl;
-	cout << "  4: Weddnesday" << endl;
-	cout << "  5: Thursday" << endl;
-	cout << "  6: Friday" << endl;
-	cout << "  7: Saturday" << endl;
-	cout << "  ******************************" << endl;
-	cout << "  Please enter the number of Day ?" << endl;
+	int Number = 0;
+	do
+	{
+		cout << Message << endl;
+		cin >> Number;
+	} while (Number < From || Number > To);
 
+	return Number;
+}
+enDayOfWeek ReadDayOfWeek() {
+
+	return (enDayOfWeek)ReadNumberInRange("Please enter day number Sun=1, Mon=2, Tue=3, Wed=4, Thu=5, Fri=6, Sat=7",1,7);
 }
 
-enWeekDay ReadWeekDay() {
-
-	int wd;
-	cin >> wd;
-	return (enWeekDay)wd;
-}
-
-string GetWeekDayName(enWeekDay WeekDay) {
+string GetDayOfWeek(enDayOfWeek Day) {
 
 
-	switch (WeekDay) {
+	switch (Day) {
 
 
-	case enWeekDay::Sun:
+	case enDayOfWeek::Sun:
 		return "Sunday";
-		break;
-	case enWeekDay::Mon:
+	case enDayOfWeek::Mon:
 		return "Monday";
-		break;
-	case enWeekDay::Tue:
+	case enDayOfWeek::Tue:
 		return "Tuesday";
-		break;
-	case enWeekDay::Wed:
+	case enDayOfWeek::Wed:
 		return "Wednesday";
-		break;
-	case enWeekDay::Thu:
+	case enDayOfWeek::Thu:
 		return "Thursday";
-		break;
-	case enWeekDay::Fri:
+	case enDayOfWeek::Fri:
 		return "Friday";
-		break;
-	case enWeekDay::Sat:
+	case enDayOfWeek::Sat:
 		return "Saturday";
-		break;
 	default:
-		return "Not a week day!\n";
+		return "Not a Valid Day!\n";
 	}
 }
 
 int main()
 {
 
-	PrintWeekDay();
-	cout << "today is " << GetWeekDayName(ReadWeekDay()) << endl;
+	cout  << GetDayOfWeek(ReadDayOfWeek()) << endl;
 	return 0;
 
 }
