@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
- 
+
 string ReadPinCode() {
 
 	string PinCode;
@@ -12,10 +12,13 @@ string ReadPinCode() {
 }
 
 bool Login() {
+
 	string PinCode;
+	int Counter = 3;
 
 	do
 	{
+		Counter--;
 		PinCode = ReadPinCode();
 
 		if (PinCode == "1234")
@@ -24,10 +27,11 @@ bool Login() {
 		}
 		else
 		{
-			cout << "\nWrong PIN\n";
 			system("color 4F");
+			cout << "\nWrong PIN, you have " << Counter << " more tries \n";
+
 		}
-	} while (PinCode != "1234");
+	} while (Counter >= 1 && PinCode != "1234");
 
 	return 0;
 }
@@ -38,8 +42,13 @@ int main()
 	{
 		system("color 2F");
 		cout << "\nYour account balance is " << 7500 << '\n';
-	};
-	
+	}
+	else
+	{
+		cout << "\nYour card blocked call the bank for help. \n";
+
+	}
+
 	return 0;
 
 }
