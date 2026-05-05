@@ -1,15 +1,16 @@
-# cpp-programming-course
-## Goal
+cpp-programming-course
+
+Goal:
 Practice structuring logic clearly and predictably.
 
-## Focus
+Focus:
 - Readability
 - Correct flow
 - Edge cases
 
+---
 
-## 🔒 Advanced and extended work is maintained in a private repository.
-
+🔒 Advanced and extended work is maintained in a private repository:
 
 👉 https://github.com/Lama-Aljohani/cpp-algorithms-level2-course5-private
 
