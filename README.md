@@ -10,8 +10,8 @@ Focus:
 
 ---
 
-🔒 Advanced and extended work is maintained in a private repository:
+🔗 Advanced and extended work from a separate course is available in another repository:
 
-👉 https://github.com/Lama-Aljohani/cpp-algorithms-level2-course5-private
+👉 https://github.com/Lama-Aljohani/cpp-algorithms-level2-course5
 
 This includes deeper problem-solving practice and additional implementations beyond the public repository.
